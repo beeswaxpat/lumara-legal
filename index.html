@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Support · Lumara</title>
+<meta name="description" content="Lumara support and privacy. Live NASA Sun and Moon viewer. Zero accounts. Zero tracking. Zero ads." />
+<style>
+  :root {
+    --bg: #0a0a0f;
+    --bg-lift: #14141e;
+    --surface: #16161f;
+    --border: #2a2a38;
+    --text: #ffffff;
+    --text-muted: #c8c8d0;
+    --text-dim: #8888a0;
+    --sun: #FFB347;
+    --moon: #B8C5D6;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background: radial-gradient(ellipse at 80% 10%, rgba(255,179,71,0.08) 0%, transparent 45%),
+                radial-gradient(ellipse at 15% 85%, rgba(184,197,214,0.06) 0%, transparent 40%),
+                var(--bg);
+    min-height: 100vh;
+  }
+  .wrap {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 48px 24px 96px;
+  }
+  header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+  }
+  .logo {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: var(--bg);
+    border: 1px solid var(--border);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .logo::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    top: 10px;
+    left: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #FFD27A 0%, #FF8E1A 60%, transparent 70%);
+    box-shadow: 0 0 16px rgba(255,179,71,0.6);
+  }
+  .logo::after {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    bottom: 8px;
+    right: 8px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #E8EEF5 0%, #98A8B8 60%, #4A5568 100%);
+    box-shadow: 0 0 12px rgba(184,197,214,0.4);
+  }
+  h1 {
+    margin: 0;
+    font-size: 28px;
+    letter-spacing: 4px;
+    font-weight: 300;
+    color: var(--sun);
+    text-shadow: 0 0 24px rgba(255,179,71,0.25);
+  }
+  .brand-sub {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin-top: 4px;
+    letter-spacing: 0.5px;
+  }
+  h2 {
+    color: var(--sun);
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 44px 0 10px;
+  }
+  h3 {
+    font-size: 17px;
+    margin: 24px 0 6px;
+    font-weight: 500;
+    color: var(--text);
+  }
+  p {
+    margin: 10px 0;
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+  ul {
+    padding-left: 22px;
+    color: var(--text-muted);
+    font-size: 15px;
+  }
+  li { margin: 6px 0; }
+  strong { color: var(--text); }
+  a {
+    color: var(--moon);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(184,197,214,0.3);
+    transition: border-color 120ms ease;
+  }
+  a:hover {
+    border-bottom-color: var(--moon);
+  }
+  .contact-card {
+    margin: 14px 0 8px;
+    padding: 18px 20px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+  }
+  .contact-card a {
+    font-size: 17px;
+    color: var(--sun);
+    border-bottom: none;
+  }
+  .contact-card .label {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    display: block;
+  }
+  footer {
+    margin-top: 64px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-dim);
+    font-size: 13px;
+  }
+  footer p { font-size: 13px; color: var(--text-dim); }
+  .pill {
+    display: inline-block;
+    padding: 4px 10px;
+    background: rgba(255,179,71,0.08);
+    color: var(--sun);
+    border: 1px solid rgba(255,179,71,0.2);
+    border-radius: 999px;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    margin-top: 8px;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <div class="logo" aria-hidden="true"></div>
+  <div>
+    <h1>LUMARA</h1>
+    <div class="brand-sub">Live Sun &amp; Moon · NASA imagery · Privacy-first</div>
+    <div class="pill">Support &amp; Privacy</div>
+  </div>
+</header>
+
+<h2>Get Support</h2>
+<p>Found a bug? Have a question about a NASA wavelength? Want to suggest a feature? Lumara is built and maintained by one person — emails go straight to a real human.</p>
+
+<div class="contact-card">
+  <span class="label">Contact</span>
+  <a href="mailto:patrick.colton@googlemail.com?subject=Lumara%20support">patrick.colton@googlemail.com</a>
+</div>
+
+<p>I read every email. Replies usually come within 24 hours.</p>
+
+<h2>Privacy Policy</h2>
+
+<h3>What Lumara collects</h3>
+<p><strong>Nothing.</strong> Lumara does not collect, store, or transmit any personal data. There are no analytics SDKs, no advertising networks, no crash reporters that contact servers, no tracking pixels, and no accounts.</p>
+
+<h3>What stays on your device</h3>
+<ul>
+  <li>Your selected city (for moonrise/moonset times) — stored locally in the app's sandbox, never transmitted.</li>
+  <li>Your preferred resolution and wavelength — stored locally.</li>
+  <li>Your dark/light theme preference — stored locally.</li>
+</ul>
+<p>If you uninstall Lumara, all of this is deleted with the app. Apple's standard iOS app sandbox isolation applies.</p>
+
+<h3>What Lumara fetches from the internet</h3>
+<p>Lumara makes anonymous, unauthenticated HTTPS requests to public NASA endpoints to load real-time solar imagery, moon phase imagery, and space weather data:</p>
+<ul>
+  <li>NASA Solar Dynamics Observatory (sdo.gsfc.nasa.gov) — solar imagery in 12 wavelengths</li>
+  <li>SOHO/LASCO consortium (soho.nascom.nasa.gov) — coronal imagery</li>
+  <li>NASA Scientific Visualization Studio (svs.gsfc.nasa.gov) — moon phase imagery and timelapse videos</li>
+  <li>NASA DONKI (api.nasa.gov/DONKI) — space weather alerts (solar flares, CMEs, geomagnetic storms)</li>
+</ul>
+<p>These requests carry no identifying information. They look identical to opening one of those URLs in a web browser. NASA's servers do log standard web traffic; that data is governed by <a href="https://www.nasa.gov/privacy/" rel="noopener">NASA's privacy policy</a>, not Lumara's.</p>
+
+<h3>Children's privacy</h3>
+<p>Lumara is suitable for all ages (Apple rating 4+). Because Lumara collects no data of any kind, it complies with COPPA, GDPR-K, and equivalent regulations by default.</p>
+
+<h3>Changes to this policy</h3>
+<p>If anything material changes, this page will be updated and the change date will appear in the footer below.</p>
+
+<h2>Frequently Asked</h2>
+
+<h3>Why are some images stale or missing?</h3>
+<p>NASA's imagery sometimes has brief outages or maintenance windows, especially on the SDO and SOHO instruments. If an image looks frozen, pull-to-refresh on the Sun tab usually fixes it. The timestamp under each image shows the actual capture time from the spacecraft.</p>
+
+<h3>Why doesn't the Live tab play on my older device?</h3>
+<p>The 4K timelapse videos are large. On older devices with slower connections, switching to a lower wavelength resolution in Settings &rarr; Default Resolution can help.</p>
+
+<h3>Can I use Lumara offline?</h3>
+<p>Moon phase calculations work fully offline (the math is pure Dart, runs on-device). Live imagery requires internet — there is no NASA imagery cached for offline viewing.</p>
+
+<h3>Is Lumara open source?</h3>
+<p>Not currently. The code is private. The data sources Lumara uses are all freely available — anyone can build their own viewer.</p>
+
+<h2>Credits</h2>
+<ul>
+  <li>Solar imagery: NASA Solar Dynamics Observatory and the AIA, EVE, and HMI science teams</li>
+  <li>Inner Corona: SOHO/LASCO consortium &mdash; a project of international cooperation between ESA and NASA</li>
+  <li>Moon imagery: NASA's Scientific Visualization Studio</li>
+  <li>Space weather data: NASA DONKI</li>
+</ul>
+<p>NASA does not endorse Lumara. All NASA imagery used in Lumara is in the public domain per <a href="https://www.nasa.gov/multimedia/guidelines/index.html" rel="noopener">NASA's media usage guidelines</a>.</p>
+
+<footer>
+  <p>Lumara &middot; Made by Beeswax Pat &middot; <a href="mailto:patrick.colton@googlemail.com">patrick.colton@googlemail.com</a></p>
+  <p>This page last updated 2026-04-27.</p>
+</footer>
+
+</div>
+</body>
+</html>
