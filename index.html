@@ -194,6 +194,7 @@
 <h3>What Lumara collects</h3>
 <p><strong>Nothing.</strong> The Lumara app does not collect, store, or transmit any personal data. There are no analytics SDKs, no advertising networks, no crash reporters that contact servers, no tracking pixels, and no accounts.</p>
 <p>The <a href="https://lumara-space.app/" rel="noopener">Lumara website</a> is the one place with an exception, and it is worth stating plainly. To see which pages get read, each page load pings a counter we run ourselves on our own ChronoVerify service. It records the page path and the day, and nothing else: no cookies, no IP address, no browser details, and no identifier of any kind, so nothing links a view to a person. It is not an analytics product and no third party receives the data. The app does not do this; only the website does.</p>
+<p>The website also loads its typefaces from Google Fonts, and its ISS video from YouTube once you ask for it. Both are set out under <a href="#third-parties">Third parties the website contacts</a> below. Again, neither applies to the app.</p>
 
 <h3>What stays on your device</h3>
 <ul>
@@ -204,14 +205,24 @@
 <p>If you uninstall Lumara, all of this is deleted with the app. Apple's standard iOS app sandbox isolation applies.</p>
 
 <h3>What Lumara fetches from the internet</h3>
-<p>Lumara makes anonymous, unauthenticated HTTPS requests to public NASA endpoints to load real-time solar imagery, moon phase imagery, and space weather data:</p>
+<p>Lumara makes anonymous, unauthenticated HTTPS requests to public science endpoints to load real-time solar imagery, moon phase imagery, and space weather data:</p>
 <ul>
   <li>NASA Solar Dynamics Observatory (sdo.gsfc.nasa.gov): solar imagery in 12 wavelengths</li>
   <li>SOHO/LASCO consortium (soho.nascom.nasa.gov): coronal imagery</li>
   <li>NASA Scientific Visualization Studio (svs.gsfc.nasa.gov): moon phase imagery and timelapse videos</li>
   <li>NASA DONKI (api.nasa.gov/DONKI): space weather alerts (solar flares, CMEs, geomagnetic storms)</li>
+  <li>NOAA Space Weather Prediction Center (services.swpc.noaa.gov): the live planetary K-index shown on the website dashboard</li>
+  <li>Our own proxy (lumara-api.beeswaxpat.workers.dev): forwards the DONKI and timelapse requests above so a NASA API key is not exposed in the browser. It is ours, not a third party, and it stores nothing</li>
 </ul>
-<p>These requests carry no identifying information. They look identical to opening one of those URLs in a web browser. NASA's servers do log standard web traffic; that data is governed by <a href="https://www.nasa.gov/privacy/" rel="noopener">NASA's privacy policy</a>, not Lumara's.</p>
+<p>These requests carry no identifying information. They look identical to opening one of those URLs in a web browser. NASA's and NOAA's servers do log standard web traffic; that data is governed by <a href="https://www.nasa.gov/privacy/" rel="noopener">NASA's privacy policy</a> and NOAA's, not Lumara's.</p>
+
+<h3 id="third-parties">Third parties the website contacts</h3>
+<p>The website (lumara-space.app) is not entirely self-contained, and it is worth being exact about that:</p>
+<ul>
+  <li><strong>Google Fonts</strong> (fonts.googleapis.com, fonts.gstatic.com): the site's two typefaces are served by Google on every page load, so Google receives your IP address and browser User-Agent. We set a referrer policy that limits what Google is told about which page you are on, but the visit itself is visible to them. No cookie is set by this request.</li>
+  <li><strong>YouTube</strong> (www.youtube-nocookie.com): the live ISS video on the dashboard. Nothing is sent to YouTube unless you press the button that loads the feed. Once you do, YouTube's own terms and privacy policy apply to that player.</li>
+</ul>
+<p>There are no analytics SDKs, no advertising networks, no social widgets, and no third-party cookies anywhere on the site or in the app.</p>
 
 <h3>Children's privacy</h3>
 <p>Lumara is suitable for all ages (Apple rating 4+). Because the app collects no data of any kind, and the website counter records no identifier that could belong to a person, it complies with COPPA, GDPR-K, and equivalent regulations by default.</p>
@@ -244,7 +255,7 @@
 
 <footer>
   <p>Lumara &middot; Made by Beeswax Pat &middot; <a href="mailto:beeswaxpat@gmail.com">beeswaxpat@gmail.com</a></p>
-  <p>This page last updated 2026-07-25.</p>
+  <p>This page last updated 2026-07-31.</p>
 </footer>
 
 </div>
